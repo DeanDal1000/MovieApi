@@ -5,12 +5,12 @@
 }
 
 body {
-    /* font-family: 'Lucida Sans Unicode', 'sans-serif';
-    background-color: white; */
+    font-family: 'Lucida Sans Unicode';
+    background-color: white;
 
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
+        animation: gradient 15s ease infinite; */
 }
 
 @keyframes gradient {
@@ -55,10 +55,10 @@ section {
     outline: none;
     background: none;
 
-    background-color: orange;
+    background-color: lightpink;
     border-radius: 20px;
     
-    color: lightgray;
+    color: black;
     font-size:20px;
     font-weight: 300;
 
@@ -66,7 +66,7 @@ section {
 }
 
 .searchBox:focus{
-    box-shadow: 0px 0px 10px 5px black;
+    box-shadow: 0px 0px 5px 5px black;
 }
 
 .results {
@@ -77,7 +77,7 @@ section {
 
 .results .result {
     width: 33.33%;
-    min-width: 250px;
+    min-width: 150px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@ section {
     font-size: 20px;
     font-weight: 500;
     padding: 10px;
-    background: grey;
+    background: black;
     flex: 1 1 100%;
     transition: 0.5s ease-out;
 }
@@ -108,7 +108,7 @@ color: teal;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vh;
+    width: 75vh;
     height: 100vh;
     background-color: whitesmoke;
     overflow-y: scroll;

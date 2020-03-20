@@ -3,7 +3,7 @@ import React from 'react'
 function MovieDatabase() {
     return (
         <div>
-            <h2>Hi Twat</h2>
+            <center><h4>Something Here</h4></center>
         </div>
     )
 }

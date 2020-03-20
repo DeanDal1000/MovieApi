@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 import Search from './components/Search'
 import Results from './components/Results'
@@ -38,7 +38,7 @@ function App() {
       return { ...prevState, s: s }
     });
   }
-
+//Open Function popup
   const openPopup = id => {
     axios(apiurl + "&i=" + id).then(({ data }) => {
       let result = data;
@@ -50,7 +50,7 @@ function App() {
       });
     });
   }
-
+  //Close function Popup
   const closePopup = () => {
     setState(prevState => {
       return { ...prevState, selected: {} }
@@ -60,6 +60,7 @@ function App() {
   return (
     <Router>
     <div>
+      <br />
       <center><h2 className="m-3 d-flex">React JS Movie Api</h2></center>
       <br />
       <center><h3 className="m-3 d-flex">Project</h3></center>
@@ -71,9 +72,11 @@ function App() {
        <Route path="/movie" component={MovieDatbase} />
        </Switch>
       <main>
+
       <Search handleInput={handleInput} search={search} />
         <Results results={state.results} openPopup={openPopup} />
         {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}        
+
       </main>
     </div>
     </Router>
@@ -83,7 +86,7 @@ function App() {
 const Home = () => (
   <div>
 
-    <h2>Home Page</h2>
+    <center><h4>Home Page</h4></center>
   </div>
 )
 
